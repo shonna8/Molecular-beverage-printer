@@ -1,0 +1,1615 @@
+* {
+    margin: 0;
+}
+@font-face {
+    font-family: EB_Garamond;
+    src: url(./font/EB_Garamond/EBGaramond-VariableFont_wght.ttf);
+}
+body {
+    font-family: EB_Garamond;
+}
+.row {
+    position: relative;
+}
+
+/* ---1.Navbar--- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #173D4C;
+
+    position: fixed;
+    top: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    width: 100%;
+    height: 46px;
+    z-index: 3;
+
+    transition: .5s;
+}
+nav.hide {
+    transform: translateY(-55px);
+}
+
+.logo {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+.logo a {
+    text-decoration: none;
+}
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.logo-link p {
+    margin-bottom: 0px;
+    /* boostrap本身p就帶有padding-bottom: 1rem，所以要記得刪除！ */
+}
+.logo img {
+    width: 25px;
+}
+.logo p {
+    font-size: 24px;
+    color: #fff;
+    margin-left: 6px;
+}
+
+/* ---下面是 漢堡夾清單--- */
+.mobile-btn {
+    width: 25px;
+    height: 25px;
+    /* outline: 1px solid red; */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    right: 10px;
+}
+.mobilebtn-1, .mobilebtn-2, .mobilebtn-3 {
+    width: 18px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #fff;
+    /* outline: 1px solid red; */
+    position: absolute;
+    
+}
+.mobilebtn-1 {
+    transform: translateY(-7px);
+    transition: .5s;
+  }
+  .mobilebtn-2 {
+    transition: .5s;
+  }
+  .mobilebtn-3 {
+    transform: translateY(7px);
+    transition: .5s;
+}
+
+.mobile-menu {
+    width: 375px;
+    height: 100vh;
+    /* height: calc(100vh - 46px); */
+    background-color: #173D4C;
+    padding-top: 70px;
+    transition: .5s;
+
+    position: fixed;
+    /* top: 46px; */
+    left: 375px;
+    z-index: 2;
+  }
+  .mobile-menu ul {
+    list-style-type: none;
+    /* outline: 1px solid red; */
+    padding-bottom: 200px;
+  }
+  .mobile-menu a {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    /* outline: 1px solid red; */
+    line-height: 50px;
+}
+.mobile-company {
+    font-size: 14px;
+    color: #fff;
+}
+
+.mobile-menu-on {
+    left: 0;
+  }
+  .mobilebtn-1-on {
+    transform: translateY(0px) rotate(45deg);
+  }
+  .mobilebtn-2-on {
+    opacity: 0;
+  }
+  .mobilebtn-3-on {
+    transform: translateY(0px) rotate(-45deg);
+}
+
+.nav-right {
+    display: none;
+}
+.reserve, .reserve-btn {
+    width: 65px;
+    height: 25px;
+    font-weight: 700;
+    background-color: rgb(255, 95, 9);
+    border-radius: 20px;
+    margin-right: 38px;
+    text-align: center;
+    /* outline: 1px solid #fff; */
+    cursor: pointer;
+}
+.reserve a, .reserve-btn a {
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+}
+.reserve:hover, .reserve-btn:hover {
+    background-color: rgb(255, 118, 44);
+}
+/* .reserve:hover a, .reserve-btn:hover a {
+    color: #173D4C;
+} */
+
+/* ---2.Banner--- */
+.banner {
+    position: relative;
+    /* position: absolute;
+    width: 100%;
+    height: 750px; */
+}
+.kitchen img {
+    width: 100%;
+    height: 100%;
+    height: 610px;
+    object-fit: cover;
+    object-position: -462px 0;
+}       
+
+.left img {
+    width: 58px;
+    position: absolute;
+    bottom: 126px;
+    left: 25px;
+    animation-name: left-move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes left-move {
+    0% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(43deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+.right img {
+    width: 55px;
+    position: absolute;
+    bottom: 77px;
+    left: 86px;
+    transform: rotate(2deg);
+}
+
+.keyword {
+    width: 101px;
+    height: 15px;
+    background-color: #FBD990;
+    position: absolute;
+    top: 120px;
+    left: 26%;
+}
+.slogan h1 {
+    font-size: 32px;
+    font-weight: 900;
+    position: absolute;
+    color: #173D4C;
+    top: 100px;
+    left: 25%;
+}
+.slogan p {
+    color: #173D4C;
+    font-size: 20px;
+    font-weight: 900;
+    position: absolute;
+    top: 150px;
+    left: 59%;
+}
+
+/* ---3. How it work--- */
+.work {
+    width: 100%;
+    background-color: #173D4C;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    position: relative;
+}
+.work h3 {
+    font-size: 28px;
+    color: #fff;
+    font-weight: 600;
+    margin: auto;
+}
+.video-wrap {
+    width: 100%;
+    margin-top: 30px;
+    /* outline: 1px solid red; */
+}
+.video-wrap video {
+    width: 100%;
+}
+.reserve-work {
+    /* outline: 1px solid red; */
+    position: absolute;
+    top: 15px;
+    left: 298px;
+}
+
+.shape-bg {
+    width: 300px;
+    /* outline: 1px solid red; */
+    position: absolute;
+    top: 305px;
+    left: -15px;
+}
+.shape-bg img {
+    width: 100%;
+    transform: rotate(280deg);
+}
+.price {
+    margin-left: 50px;
+    /* outline: 1px solid red; */
+    position: absolute;
+    top: 340px;
+    z-index: 1;
+}
+.work h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #173D4C;
+    line-height: 24px;
+}
+.work h4 span {
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(255, 95, 9);
+}
+h4.start-year {
+    padding-top: 20px;
+}
+
+.mainpoints {
+    padding-top: 220px;
+    /* outline: 1px solid red; */
+}
+.mainpoints-card {
+    width: 100%;
+    /* outline: 1px solid orange; */
+    padding: 0 10px;
+}
+.card-imgwrap {
+    /* outline: 1px solid red; */
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+    background-color: rgb(226, 224, 224);
+    /* outline: 1px solid red; */
+}
+.card-imgwrap img {
+    width: 160px;
+    height: 160px;
+}
+.card-imgwrap2, .card-imgwrap3 {
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+    overflow: hidden;
+    /* outline: 1px solid red; */
+}
+.card-imgwrap2 img, .card-imgwrap3 img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+}
+.card-imgwrap2 img {
+    transform: scale(1.25);
+    object-position: -20px 0px;
+}
+.card-imgwrap3 img {
+    object-position: -52px 0px;
+}
+.card-content1, .card-content3 {
+    width: 190px;
+    padding-left: 15px;
+    /* outline: 1px solid green; */
+}
+.card-content2 {
+    width: 190px;
+    padding-right: 15px;
+    /* outline: 1px solid green; */
+}
+
+.mainpoints-card h4 {
+    /* outline: 1px solid red; */
+    font-size: 20px;
+    font-weight: 900;
+    color: rgb(255, 95, 9);
+    /* margin-top: 5px; */
+}
+.mainpoints-card p {
+    font-size: 16px;
+    color: #fff;
+    text-align: justify;
+    /* outline: 1px solid red; */
+}
+
+/* ---4.Drinks item--- */
+.drinks {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+
+    background-color: #173D4C;
+    transition: .5s;
+}
+.water-bg {
+    width: 114%;
+    position: absolute;
+    top: 0px;
+    right: -70px;
+    /* 背景會爆版，所以.drinks父層用overflow: hidden; */
+}
+.water-bg img {
+    width: 100%;
+    opacity: 0;
+    transition: .5s;
+}
+.keyword-title {
+    width: 158px;
+    height: 15px;
+    background-color: #FBD990;
+    position: absolute;
+    left: 112px;
+    top: 19px;
+
+    opacity: 0;
+}
+.drinks h3, .impacts h3 {
+    font-size: 28px;
+    font-weight: 900;
+    color: #173D4C;
+    padding-bottom: 30px;
+    z-index: 1;
+}
+
+/* ---下面是輪播牆--- */
+.carousel {
+    width: 200px;
+    height: 155px;
+    /* outline: 1px solid red; */
+    overflow: hidden;
+}
+.carousel-train {
+    /* outline: 1px solid blue; */
+    width: 900%;
+    transition: .5s;
+}
+.carousel-train li {
+    /* margin-left: 12px; */
+    /* outline: 1px solid red; */
+}
+.carousel-train img {
+    width: 100%;
+}
+
+.arrow-btn {
+    width: 100%;
+    /* outline: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    position: absolute;
+    top: -100px;
+}
+.btn-left, .btn-right {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 3px 5px #ddd; 
+    transition: .3s;
+    /* outline: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.btn-left svg, .btn-right svg {
+    width: 16px;
+    fill: rgb(255, 95, 9);
+}
+
+.slider-dots {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+     /* border: 1px solid red; */
+}
+.slider-dots li {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: rgb(255, 95, 9);
+    margin: 0 3px;
+    transition: .5s;
+    cursor: pointer;
+}
+#slider-dots-no1 {
+    width: 24px;
+}
+
+.hashtags {
+    /* outline: 1px solid red; */
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+.hashtags a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #fff;
+    border-radius: 16px;
+    background-color: #173D4C;
+    padding: 6px 12px;
+    margin: 0px 4.5px 8px;
+}
+
+
+.customer-need {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* outline: 1px solid red; */
+}
+.first-row, .second-row {
+    width: 97%;
+    height: 150px;
+    /* outline: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.first-row-no1, .second-row-no3 {
+    width: 220px;
+    height: 100%;
+    /* outline: 1px solid green; */
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.first-row-no2, .second-row-no1 {
+    width: 137px;
+    height: 100%;
+    /* outline: 1px solid green; */
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.first-row-no3, .second-row-no2 {
+    cursor: pointer;
+}
+
+.first-row-no1 img, .first-row-no2 img, .second-row-no1 img, .second-row-no3 img {
+    width: 100%;
+}
+.first-row-no2 img {
+    transform: scale(1.06);
+}
+.second-row-no1 img {
+    transform: scale(1.4);
+}
+.second-row-no3 img {
+    transform: scale(1.05);
+}
+.first-row-no3, .second-row-no2 {
+    display: none;
+}
+
+/* ---下面是 做巴黎效果--- */
+.first-row-no1, .first-row-no2, .first-row-no3, .second-row-no1, .second-row-no2, .second-row-no3 {
+    background-color: #000;
+    position: relative;
+}
+.first-row-no1 p, .first-row-no2 p, .first-row-no3 p, .second-row-no1 p, .second-row-no2 p, .second-row-no3 p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 0;
+    opacity: .5;
+    transition: .5s;
+}
+.first-row-no1 img, .first-row-no2 img, .first-row-no3 img, .second-row-no1 img, .second-row-no2 img, .second-row-no3 img {
+    transition: .5s;
+    opacity: 1;
+}
+
+
+/* ---5.Impacts--- */
+.impacts {
+    position: relative;
+    width: 100%;
+    padding-bottom: 40px;
+    /* outline: 1px solid blue; */
+    
+}
+.city-wrap{
+    /* height: 300px; */
+    /* width: 100%;
+    overflow: hidden; */
+}
+.city {
+    /* outline: 1px solid red; */
+    width: 168%;
+    opacity: .7;
+    position: absolute;
+    top: 80px;
+    left: -402px;
+}
+.city img {
+    width: 100%;
+    opacity: 0.85;
+    animation: city-rotate 40s infinite linear forwards ;
+}
+@keyframes city-rotate {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+.keyword-title2 {
+    width: 87px;
+    height: 15px;
+    background-color: #FBD990;
+    position: absolute;
+    left: 148px;
+    top: 19px;
+}
+
+.impacts-content {
+    width: 90%;
+    /* outline: 1px solid red; */
+}
+.impacts-content-card {
+    width: 100%;
+    margin-bottom: 30px;
+    /* outline: 1px solid blue; */
+}
+.impact-card-imgwrap, .impact-card-imgwrap2, .impact-card-imgwrap3 {
+    width: 150px;
+    height: 150px;
+    /* outline: 1px solid green; */
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.impact-card-imgwrap img {
+    width: 120%;
+    object-fit: cover;
+    object-position: -18px 0;
+}
+.impact-card-imgwrap2 img {
+    height: 100%;
+    object-fit: cover;
+    object-position: -11px 0;
+}
+.impact-card-imgwrap3 img {
+    height: 100%;
+    object-fit: cover;
+    object-position: -10px 0;
+}
+
+.impacts-content-card h4 {
+    font-size: 24px;
+    font-weight: 900;
+    color: rgb(255, 95, 9);
+    /* outline: 1px solid red; */
+    text-align: center;
+    padding-top: 10px;
+}
+.impacts-content-card span {
+    font-size: 32px;
+}
+.impacts-content-card p {
+    /* outline: 1px solid blue; */
+    font-size: 16px;
+    font-weight: 900;
+    color: #173D4C;
+    text-align: center;
+}
+
+/* ---footer--- */
+footer {
+    background-color: #173D4C;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.brand-info {
+    width: 100%;
+    padding: 0 10px;
+    /* outline: 1px solid red; */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.brand-info img {
+    width: 30px;
+    /* margin-left: 10px; */
+}
+.brand-info p {
+    color: #fff;
+    margin-bottom: 0;
+    font-size: 28px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.reseve-animation {
+    position: relative;
+}
+.reserve-info {
+    width: 65px;
+    height: 25px;
+    font-weight: 700;
+    background-color: rgb(255, 95, 9);
+    border-radius: 20px;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    /* outline: 1px solid red; */
+    cursor: pointer;
+}
+.reserve-info a {
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+}
+.reserve-info:hover {
+    background-color: rgb(255, 118, 44);
+}
+/* .reserve-info:hover a {
+    color: #173D4C;
+} */
+
+.reserve-shadow {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgb(255, 95, 9);
+    position: absolute;
+    top: 0;
+    animation: pulsing1 2.5s linear infinite;
+}
+@keyframes pulsing1 {
+	0% {
+		opacity: 1;
+		transform: scaleY(1) scaleX(1);
+	}
+	20% {
+		opacity: 0.7;
+	}
+	70% {
+		opacity: 0.4;
+		transform: scaleY(1.3) scaleX(1.15);
+	}
+	80% {
+		opacity: 0.2;
+		transform: scaleY(1.3) scaleX(1.15);
+	}
+	90% {
+		opacity: 0;
+		transform: scaleY(1) scaleX(1);
+	}
+}
+
+.cana-infomation {
+    width: 100%;
+}
+.contact-info {
+    width: 100%;
+    /* outline: 1px solid red; */
+    padding: 0 10px;
+    padding-bottom: 30px;
+    line-height: 29px;
+    position: relative;
+}
+.slogan-small, .email {
+    font-size: 16px;
+    color: #fff;
+}
+.email a {
+    color: #fff;
+    font-weight: 400;
+}
+.items {
+    /* outline: 1px solid red; */
+    width: 100%;
+    padding: 0 10px;
+    padding-bottom: 30px;
+}
+.items a {
+    color: #fff;
+    font-size: 18px;
+    line-height: 40px;
+}
+.socialmedia {
+    /* outline: 1px solid red; */
+    width: 100%;
+    /* padding: 0 10px; */
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+.socialmedia-icon-btn {
+    margin-left: 20px;
+}
+.icon-wrap {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-wrap svg {
+    width: 20px;
+    fill: #173D4C;
+}
+.footer-bottom-info {
+    /* outline: 1px solid red; */
+    width: 100%;
+    padding: 0 10px;
+    color: #fff;
+}
+.rights ul {
+    justify-content: space-between;
+}
+.rights a {
+    font-size: 14px;
+    color: #fff;
+}
+.company {
+    /* outline: 1px solid red; */
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---RWD---------------------------- */
+
+@media screen and (min-width: 600px) {
+    /* ---1. Navbar--- */
+    nav {
+        height: 55px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .logo img {
+        width: 30px;
+    }
+    .logo p {
+        font-size: 28px;
+        font-weight: 900;
+        margin-left: 10px;
+    }
+    .logo a:hover {
+        text-decoration: none;
+    }
+    .mobile-btn {
+        display: none;
+    }
+    .nav-right {
+        display: flex;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+        
+    }
+    li a {
+        font-size: 20px;
+        font-weight: 500;
+        padding: 0 50px;
+        text-decoration: none;
+        color: #fff;
+    }
+    .nav-right a:hover {
+        text-decoration: none;
+        color: rgb(255, 95, 9);
+    }
+
+    .reserve, .reserve-btn {
+        width: 100px;
+        height: 35px;
+        margin-right: 10px;
+    }
+    .reserve a, .reserve-btn a {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    /* ---漢堡夾--- */
+    .mobile-menu {
+        display: none;
+    }
+
+
+    /* ---2.Banner--- */    
+    .kitchen img {
+        width: 100%;
+        height: 780px;
+        object-position: center;
+    }
+    .left img {
+        width: 96px;
+        bottom: 148px;
+        left: 646px;
+    }
+    .right img {
+        width: 95px;
+        bottom: 60px;
+        left: 750px;
+    }
+    .keyword {
+        width: 150px;
+        height: 22px;
+        top: 115px;
+        left: 52.5%;
+    }
+    .slogan h1 {
+        font-size: 48px;
+        top: 85px;
+        left: 52%;
+    }
+    .slogan p {
+        font-size: 28px;
+        top: 165px;
+        left: 70%;
+    }
+
+    /* ---3.How it work--- */
+    .work {
+        height: 850px;
+        overflow: hidden;
+        padding-top: 80px;
+    }
+    .work h3 {
+        font-size: 36px;
+    }
+    .video-wrap {
+        width: 50%;
+        margin-top: 10px;
+        position: absolute;
+        left: 0;
+        top: 80px;
+    }
+    .reserve-work {
+        position: absolute;
+        top: 440px;
+        left: 460px;
+    }
+    .shape-bg {
+        width: 560px;
+        top: 470px;
+        left: 80px;
+    }
+
+    .price {
+        position: absolute;
+        top: 480px;
+    }
+    .work h4 {
+        line-height: 47px;
+        font-size: 24px;
+    }
+    .work h4 span {
+        font-size: 48px;
+    }
+
+    .mainpoints {
+        width: 50%;
+        position: absolute;
+        /* outline: 1px solid red; */
+        right: 0;
+        padding-top: 75px;
+    }
+    .mainpoints-card {
+        width: 100%;
+        /* outline: 1px solid orange; */
+        padding-left: 60px;
+        padding-right: 10px;
+    }
+    .card-imgwrap {
+        width: 180px;
+        height: 180px;
+        overflow: hidden;
+    }
+    .card-imgwrap img {
+        width: 180px;
+        height: 180px;
+        transition: .5s;
+    }
+    .card-imgwrap:hover img, .card-imgwrap3:hover img {
+        transform: scale(1.2);
+    }
+    .card-imgwrap2, .card-imgwrap3 {
+        width: 180px;
+        height: 180px;
+        /* outline: 1px solid red; */
+    }
+    .card-imgwrap2 img, .card-imgwrap3 img {
+        width: 180px;
+        height: 180px;
+        transition: .5s;
+    }
+    .card-imgwrap2:hover img {
+        transform: scale(1.45);
+    }
+    .card-content1, .card-content3 {
+        width: 360px;
+        padding-left: 20px;
+        /* outline: 1px solid red; */
+    }
+    .card-content2 {
+        width: 360px;
+        padding-right: 20px;
+        /* outline: 1px solid red; */
+    }
+
+    .mainpoints-card h4 {
+        font-size: 24px;
+    }
+    .mainpoints-card p {
+        font-size: 18px;
+    }
+
+    .card-imgwrap2:hover img {
+        /* transform: scale(3); */
+    }
+
+
+    /* ---4.Drinks item--- */
+    .drinks {
+        padding-top: 80px;
+        padding-bottom: 60px;
+        overflow: visible;
+    }
+    .water-bg {
+        width: 65%;
+        right: 0;
+    }
+    .keyword-title {
+        width: 205px;
+        height: 17px;
+        left: 474px;
+        top: 25px;
+    }
+    .drinks h3, .impacts h3 {
+        width: 100%;
+        font-size: 36px;
+        padding-bottom: 50px;
+        /* outline: 1px solid red; */
+        display: flex;
+        justify-content: center;
+    }
+    /* ---下面是輪播牆--- */
+    .carousel {
+        width: 810px;
+        /* overflow:visible; */
+    }
+    .carousel-train {
+        /* outline: 1px solid blue; */
+        width: 300%;
+    }
+    .carousel-train li {
+        /* outline: 1px solid green; */
+        padding-left: 40px;
+        padding-right: 30px;
+    }
+    .arrow-btn {
+        /* outline: 1px solid blue; */
+        padding: 0 100px;
+    }
+    .btn-left:hover, .btn-right:hover {
+        transform: translateY(-8px);
+    }
+    .btn-left:hover svg, .btn-right:hover svg {
+        fill: rgb(228, 83, 5);
+    }
+    .slider-dots {
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    .hashtags {
+        /* outline: 1px solid red; */
+        padding: 0 60px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    .hashtags a {
+        font-size: 16px;
+        margin: 0 8px;
+        padding: 6px 20px;
+        text-decoration: none;
+    }
+    .hashtags a:hover {
+        background-color: rgb(255, 95, 9);
+    }
+
+    .customer-need {
+        /* outline: 1px solid red; */
+    }
+    .first-row, .second-row {
+        width: 100%;
+        height: 250px;
+        /* outline: 1px solid blue; */
+        margin-bottom: 10px;
+    }
+    .first-row-no1, .second-row-no3 {
+        width: 48%;
+        height: 250px;
+    }
+    .first-row-no2, .first-row-no3, .second-row-no1, .second-row-no2 {
+        width: 25%;
+        height: 250px;
+        display: block;
+    }
+    .first-row-no3, .second-row-no2 {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .first-row-no3 img, .second-row-no2 img {
+        height: 100%;
+    }
+    .first-row-no1 img {
+        transform: translateY(-20px);
+    }
+    .first-row-no2 img {
+        transform: translateY(-50px);
+    }
+    .first-row-no3 img {
+        transform: translateX(-25px);
+    }
+    .second-row-no1 img {
+        transform: scale(1.1) translateY(-50px);
+    }
+    .second-row-no2 img {
+        transform: translateX(-28px); 
+    }
+    /* ---下面是 巴黎效果--- */
+    .first-row-no1 p, .first-row-no2 p, .first-row-no3 p, .second-row-no1 p, .second-row-no2 p, .second-row-no3 p {
+        font-size: 28px;
+    }
+    .first-row-no1:hover img, .first-row-no2:hover img, .first-row-no3:hover img, .second-row-no1:hover img, .second-row-no2:hover img, .second-row-no3:hover img {
+        opacity: .8;
+    }
+    .first-row-no1:hover p, .first-row-no2:hover p, .first-row-no3:hover p, .second-row-no1:hover p, .second-row-no2:hover p, .second-row-no3:hover p {
+        opacity: .75;
+    }
+
+    .first-row-no1:hover img {
+        transform: translateY(-20px) scale(1.1);
+    }
+    .first-row-no2:hover img {
+        transform: translateY(-50px) scale(1.1);
+    }
+    .first-row-no3:hover img {
+        transform: translateX(-25px) scale(1.1);
+    }
+    .second-row-no1:hover img {
+        transform: scale(1.1) translateY(-50px) scale(1.1);
+    }
+    .second-row-no2:hover img {
+        transform: translateX(-28px) scale(1.1);
+    }
+    .second-row-no3:hover img {
+        transform: scale(1.1);
+    }
+
+
+    /* ---5.Impacts--- */
+    .impacts {
+        padding-top: 80px;
+        padding-bottom: 60px;
+        /* overflow: hidden; */
+    }
+    .city {
+        width: 60%;
+        top: -20px;
+        left: -350px;
+    }
+    .keyword-title2 {
+        width: 113px;
+        height: 17px;
+        left: 520px;
+        top: 24px;
+    }
+
+    .impacts-content {
+        width: 100%;
+        /* outline: 1px solid red; */
+    }
+    .impacts-content-card {
+        /* outline: 1px solid blue; */
+        margin-bottom: 40px;
+        padding: 0 70px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        
+    }
+    .impact-card-imgwrap, .impact-card-imgwrap2, .impact-card-imgwrap3 {
+        width: 220px;
+        height: 220px;
+        margin: 0;
+    }
+    .impact-card-imgwrap img, .impact-card-imgwrap2 img, .impact-card-imgwrap3 img {
+        transition: .5s;
+    }
+    .impact-card-imgwrap:hover img, .impact-card-imgwrap2:hover img, .impact-card-imgwrap3:hover img {
+        transform: scale(1.2);
+    }
+
+    .impact-card-text {
+        width: 70%;
+        /* outline: 1px solid red; */
+        padding-right: 20px;
+    }
+
+    .impacts-content-card h4 {
+        font-size: 28px;
+        /* outline: 1px solid red; */
+    }
+    .impacts-content-card span {
+        font-size: 48px;
+    }
+    .impacts-content-card p {
+        /* outline: 1px solid red; */
+        font-size: 21px;
+    }
+
+
+    /* ---footer--- */
+    footer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .footer-content {
+        width: 100%;
+        /* outline: 1px solid red; */
+        padding: 0 50px;
+    }
+    .brand-info {
+        /* outline: 1px solid red; */
+        padding: 0;
+        margin-bottom: 30px;
+    }
+    .brand-info a {
+        text-decoration: none;
+    }
+    .brand-info img {
+        width: 35px;
+    }
+    .brand-info p {
+        font-size: 30px;
+        margin-left: 15px;
+        font-weight: 600;
+    }
+    .reserve-info {
+        width: 100px;
+        height: 35px;
+    }
+    .reserve-info a {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .cana-infomation {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 80px;
+    }
+    .contact-info {
+        /* outline: 1px solid red; */
+        padding: 0;
+        line-height: 35px;
+    }
+    .slogan-small, .email {
+        font-size: 20px;
+    }
+    .email a {
+        text-decoration: none;
+    }
+    .email:hover span {
+        color: rgb(255, 95, 9);
+    }
+    .items {
+        /* outline: 1px solid red; */
+        padding: 0;
+    }
+    .items ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .items a {
+        font-size: 20px;
+        text-decoration: none;
+        padding: 0;
+    }
+    .items a:hover {
+        color: rgb(255, 95, 9);
+    }
+
+    .socialmedia {
+        /* outline: 1px solid red; */
+        padding: 0;
+        justify-content: flex-start;
+    }
+    .icon-wrap:hover svg {
+        fill: rgb(255, 95, 9);
+    }
+    .footer-bottom-info {
+        /* outline: 1px solid red; */
+        padding: 0;
+        line-height: 40px;
+    }
+    .rights ul {
+        justify-content: center;
+    }
+    .rights a {
+        text-decoration: none;
+        font-size: 16px;
+        padding: 0 30px;
+    }
+    .company {
+        font-size: 16px;
+    }
+
+
+
+}
+
+
+
+/* ---RWD Class311 Desktop----- */
+@media screen and (min-width: 1600px) {
+    .container {
+        max-width: 1440px;
+      }
+
+
+    nav {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+    nav.hide {
+        transform: translateY(-70px);
+    }
+    .logo {
+        margin-left: 40px;
+    }
+    .logo img {
+        width: 35px;
+    }
+    .logo p {
+        font-size: 36px;
+    }
+    li a {
+        font-size: 24px;
+        padding: 0 80px;
+    }
+    .reserve, .reserve-btn {
+        width: 120px;
+        height: 40px;
+        margin-right: 40px;
+    }
+    .reserve a, .reserve-btn a {
+        font-size: 24px;
+    }
+
+
+    /* ---2.Banner----- */
+    .kitchen img {
+        height: 900px;
+    }
+    .left img {
+        width: 100px;
+        bottom: 137px;
+        left: 834px;
+    }
+    .right img {
+        width: 100px;
+        bottom: 40px;
+        left: 940px;
+    }
+
+    .keyword {
+        width: 160px;
+        height: 24px;
+        top: 155px;
+    }
+    .slogan h1 {
+        font-size: 52px;
+        top: 120px;
+    }
+    .slogan p {
+        font-size: 36px;
+        top: 200px;
+    }
+
+
+    /* ---3.How it work--- */
+    .work {
+        height: 980px;
+    }
+    .work h3 {
+        font-size: 48px;
+    }
+    .video-wrap {
+        width: 50%;
+        margin-top: 20px;
+    }
+    .reserve-work {
+        top: 550px;
+        left: 580px;
+    }
+    .reserve-info {
+        width: 120px;
+        height: 40px;
+    }
+    .reserve-info a {
+        font-size: 24px;
+    }
+    .shape-bg {
+        width: 560px;
+        top: 570px;
+        left: 200px;
+    }
+    .price {
+        top: 580px;
+        left: 60px;
+    }
+    .work h4 {
+        line-height: 47px;
+        font-size: 28px;
+    }
+    .work h4 span {
+        font-size: 52px;
+    }
+    h4.start-year {
+        padding-top: 35px;
+        /* outline: 1px solid red; */
+    }
+
+    .mainpoints {
+        padding-top: 50px;
+    }
+    .mainpoints-card {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 30px;
+    }
+    .card-imgwrap, .card-imgwrap2, .card-imgwrap3 {
+        width: 200px;
+        height: 200px;
+    }
+    .card-imgwrap img, .card-imgwrap2 img, .card-imgwrap3 img {
+        width: 200px;
+        height: 200px;
+    }
+    .card-content1, .card-content3 {
+        width: 360px;
+        padding-left: 20px;
+    }
+    .mainpoints-card h4 {
+        font-size: 28px;
+    }
+    .mainpoints-card p {
+        font-size: 24px;
+    }
+
+
+    /* ---4.Drinks item--- */
+    .keyword-title {
+        width: 280px;
+        height: 20px;
+        left: 592px;
+        top: 33px;
+    }
+    .drinks h3, .impacts h3 {
+        font-size: 48px;
+    }
+    /* ---下面是輪播牆--- */
+    .carousel {
+        width: 1050px;
+        height: 220px;
+        /* outline: 1px solid red; */
+    }
+    .arrow-btn {
+        top: -140px;
+        padding: 0 120px;
+    }
+    .btn-left:hover, .btn-right:hover {
+        transform: translateY(-10px);
+    }
+    .btn-left, .btn-right {
+        width: 55px;
+        height: 55px;
+    }
+    .btn-left svg, .btn-right svg {
+        width: 17px;
+    }
+    .slider-dots {
+        margin-bottom: 60px;
+    }
+    .slider-dots li {
+        height: 6px;
+        margin: 0 6px;
+    }
+    .hashtags a {
+        font-size: 24px;
+        margin: 0 10px;
+        padding: 10px 25px;
+        border-radius: 20px;
+    }
+
+    .first-row, .second-row {
+        height: 300px;
+        margin-bottom: 15px;
+    }
+    .first-row-no1, .second-row-no3 {
+        height: 300px;
+    }
+    .first-row-no2, .first-row-no3, .second-row-no1, .second-row-no2 {
+        height: 300px;
+    }
+    .first-row-no1 p, .first-row-no2 p, .first-row-no3 p, .second-row-no1 p, .second-row-no2 p, .second-row-no3 p {
+        font-size: 32px;
+    }
+
+
+    /* ---5.Impacts--- */
+    .city {
+        width: 55%;
+        top: -20px;
+        left: -370px;
+    }
+    .keyword-title2 {
+        width: 153px;
+        height: 20px;
+        left: 653px;
+        top: 32px;
+    }
+    .impacts-content-card  {
+        margin-bottom: 50px;
+        padding: 0 40px;
+    }
+    .impact-card-imgwrap, .impact-card-imgwrap2, .impact-card-imgwrap3 {
+        width: 250px;
+        height: 250px;
+    }
+    .impact-card-imgwrap img {
+        object-position: -28px 0;
+    }
+    .impact-card-text {
+        width: 70%;
+        padding-right: 20px;
+    }
+    .impacts-content-card h4 {
+        font-size: 36px;
+    }
+    .impacts-content-card span {
+        font-size: 52px;
+    }
+    .impacts-content-card p {
+        font-size: 28px;
+    }
+
+
+    /* ---footer--- */
+    footer {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+    .brand-info {
+        margin-bottom: 40px;
+    }
+    .brand-info img {
+        width: 35px;
+    }
+    .brand-info p {
+        font-size: 36px;
+    }
+
+    .contact-info {
+        line-height: 50px;
+    }
+    .slogan-small, .email {
+        font-size: 24px;
+    }
+    .items a {
+        font-size: 24px;
+        line-height: 50px;
+    }
+    .icon-wrap {
+        width: 45px;
+        height: 45px;
+    }
+    .icon-wrap svg {
+        width: 25px;
+    }
+    .rights {
+        /* outline: 1px solid red; */
+        padding: 50px 0 15px;
+    }
+    .rights a {
+        font-size: 20px;
+    }
+    .company {
+        font-size: 20px;
+    }
+
+}
